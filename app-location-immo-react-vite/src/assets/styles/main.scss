@@ -1,1 +1,5 @@
-@import './pages-style/accueil.scss';
+@use './base/body.scss';
+
+@use './pages-style/accueil.scss';
+@use './component-style/header.scss';
+
