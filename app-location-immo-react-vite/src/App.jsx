@@ -1,8 +1,11 @@
+import { Routes, Route } from 'react-router-dom';
+import Accueil from './assets/pages-router/accueil';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Bienvenue dans mon projet React + Vite</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Accueil />} />
+    </Routes>
   );
 }
 
