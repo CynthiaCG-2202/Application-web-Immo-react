@@ -1,4 +1,4 @@
-[
+const appartments = [
 	{
 		"id": "c67ab8a7",
 		"title": "Appartement cosy",
@@ -615,5 +615,12 @@
 			"Marais",
 			"Rivoli"
 		]
+	},
+	{
+		"id": "fake-id",
+		"title": "Titre logement",
+		"cover": "https://zupimages.net/up/25/27/seov.png",
 	}
-]
+];
+
+export default appartments;

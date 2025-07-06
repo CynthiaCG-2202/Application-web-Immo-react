@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
 
   &__logo {
     height: 68px;
@@ -12,10 +11,13 @@
   &__nav {
     display: flex;
     gap: 1rem;
+    font-size: 24px;
 
     a {
       text-decoration: none;
       color: #000000;
+      font-size: 24px;
+
     }
   }
 }

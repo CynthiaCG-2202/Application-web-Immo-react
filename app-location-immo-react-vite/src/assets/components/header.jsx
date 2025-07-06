@@ -9,6 +9,7 @@ function Header() {
       <nav className="header__nav">
         <Link to="/">Accueil</Link>
         <Link to="/a-propos">À propos</Link>
+
       </nav>
     </header>
   );
