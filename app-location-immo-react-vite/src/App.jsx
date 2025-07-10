@@ -1,15 +1,21 @@
-import { Routes, Route } from 'react-router-dom';
-import Accueil from './assets/pages-router/accueil';
-import Apropos from './assets/pages-router/apropos';
-import Error404 from './assets/pages-router/error404';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Error404 from './Pages/Error404';
+import Layout from './Layout/Layout';
+
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Accueil />} />
-      <Route path="/a-propos" element={<Apropos />} />
-      <Route path="*" element={<Error404 />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />} >
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Error404 />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

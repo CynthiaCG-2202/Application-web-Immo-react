@@ -1,4 +1,4 @@
-function Apropos() {
+function About() {
   return (
     <main>
       <h1>Page À propos</h1>
@@ -6,4 +6,4 @@ function Apropos() {
   );
 }
 
-export default Apropos;
+export default About;

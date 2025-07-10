@@ -1,15 +1,11 @@
 import appartments from '../data';
-import Header from '../components/header';
 import Banner from '../components/banner';
-import Footer from '../components/footer';
 import Card from '../components/card';
 
 
-function Accueil() {
+function Home() {
   return (
-    <main className="page-accueil">
-      <div className="container-accueil">
-        <Header />
+    <main className="home">
         <Banner />
         <div className="gallery">
           {appartments.map((appartment) => (
@@ -21,10 +17,8 @@ function Accueil() {
             />
           ))}
         </div>
-      </div>
-      <Footer />
     </main>
   );
 }
 
-export default Accueil;
+export default Home;

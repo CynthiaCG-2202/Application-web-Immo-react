@@ -1,4 +1,4 @@
-import logo from '../images/logo-kasa-white.png';
+import logo from '../assets/images/logo-kasa-white.png';
 
 
 function Footer() {
