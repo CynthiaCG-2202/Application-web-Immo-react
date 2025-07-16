@@ -11,7 +11,10 @@
 
 @use './component-style/collapses';
 
+@use './pages-style/house-page.scss';
+
 @use './component-style/footer';
 
-@use './abstract/mixins';
+@use './abstract/mixins-responsive';
+
 

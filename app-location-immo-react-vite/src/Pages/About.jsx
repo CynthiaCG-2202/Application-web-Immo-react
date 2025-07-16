@@ -1,5 +1,5 @@
 import Banner from '../Components/Banner-About';
-import Collapse from '../components/collapse';
+import Collapse from '../Components/CollapseAbout';
 import aboutCollapses from '../AboutCollapses';
 
 function About() {
