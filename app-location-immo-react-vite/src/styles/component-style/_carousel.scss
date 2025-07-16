@@ -1,0 +1,34 @@
+.carousel {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    .carousel-arrow.left {
+        position: absolute;
+        z-index: 1;
+        left: 70px;
+        background: none;
+        border: none;
+    }
+
+    .carousel-arrow.right {
+        position: absolute;
+        z-index: 1;
+        right: 70px;
+        background: none;
+        border: none;
+    }
+
+    .carousel-img {
+        width: 1240px;
+        height: 415px;
+        object-fit: cover;
+        border-radius: 25px;
+        position: relative;
+        z-index: -1;
+
+    }
+
+
+}
