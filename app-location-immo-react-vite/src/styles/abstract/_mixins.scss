@@ -1,0 +1,83 @@
+// Déclaration des mixins
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==tablet {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==mobile {
+        @media (max-width: 480px) {
+            @content;
+        }
+    }
+}
+
+.container-page {
+
+    @include responsive(tablet) {}
+
+    @include responsive(mobile) {
+        margin: 25px 15px 0px;
+    }
+}
+
+.header {
+
+    &__logo {
+        @include responsive(mobile) {
+            height: 40px;
+            width: 125px;
+            object-fit: cover;
+        }
+    }
+
+    &__nav {
+        @include responsive(mobile) {
+            gap: 1rem;
+        }
+    }
+
+    &__nav a {
+        @include responsive(mobile) {
+            font-size: 17px;
+        }
+    }
+}
+
+.banner {
+    @include responsive(mobile) {
+        height: 111px;
+    }
+}
+
+// About-page 
+
+.about-collapse {
+
+    @include responsive(mobile) {
+        gap: 25px;
+        margin-bottom: 40px;
+        margin-top: 50px;
+    }
+
+    .collapse-container {
+        @include responsive(mobile) {
+            width: 300px;
+        }
+
+        .collapse-header {
+            @include responsive(mobile) {
+                width: 300px;
+                font-size: 17px;
+            }
+        }
+    }
+
+}
+
+footer {
+    @include responsive(mobile) {
+        padding: 86px;
+    }
+}

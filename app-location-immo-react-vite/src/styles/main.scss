@@ -9,7 +9,9 @@
 
 @use './pages-style/error404';
 
-@use './component-style/_collapses';
+@use './component-style/collapses';
 
 @use './component-style/footer';
+
+@use './abstract/mixins';
 
