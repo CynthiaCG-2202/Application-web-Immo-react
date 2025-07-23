@@ -15,6 +15,7 @@
             .location {
                 font-size: 18px;
                 font-weight: 500;
+                margin-top: 10px;
 
             }
 
@@ -52,9 +53,10 @@
 
         .tags {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
 
-            & span {
+            .tag {
                 background-color: #FF6060;
                 color: white;
                 font-size: 14px;
@@ -66,10 +68,24 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+
+                .tag-text {
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    text-align: center;
+                }
             }
         }
+
     }
+}
+
+.collapses {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    gap: 30px;
 }

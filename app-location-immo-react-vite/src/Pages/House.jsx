@@ -1,7 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import appartments from "../data";
 import Carousel from "../Components/Carousel";
-import Collapse from "../Components/CollapseAbout";
+import Collapse from "../Components/Collapse";
 import Stars from "../Components/Stars";
 
 function House() {
@@ -38,26 +38,28 @@ function House() {
                     <div className="tags">
                         {apartment.tags.map((tag, index) => (
                             <span key={index} className="tag">
-                                {tag}
+                                <span className="tag-text">{tag}</span>
                             </span>
                         ))}
                     </div>
+
                     <Stars rating={parseInt(apartment.rating)} />
                 </div>
             </div>
 
             <div className="collapses">
-                <Collapse title="Description">
+                <Collapse title="Description" variant="house">
                     <p>{apartment.description}</p>
                 </Collapse>
 
-                <Collapse title="Équipements">
+                <Collapse title="Équipements" variant="house">
                     <ul>
                         {apartment.equipments.map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
                     </ul>
                 </Collapse>
+
             </div>
         </div>
     );

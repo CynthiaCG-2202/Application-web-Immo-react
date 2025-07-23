@@ -1,17 +1,18 @@
 import Banner from '../Components/Banner-About';
-import Collapse from '../Components/CollapseAbout';
+import Collapse from '../Components/Collapse';
 import aboutCollapses from '../AboutCollapses';
 
 function About() {
   return (
     <main>
-      <Banner/>
+      <Banner />
       <div className='about-collapse'>
-      {aboutCollapses.map((item) => (
-        <Collapse key={item.id} title={item.title}>
-          {item.content}
-        </Collapse>
-      ))}
+        {aboutCollapses.map((item) => (
+          <Collapse key={item.id} title={item.title} variant="about">
+            {item.content}
+          </Collapse>
+        ))}
+
       </div>
     </main>
   );

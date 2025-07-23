@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import "../styles/component-style/_collapses.scss";
 
-function Collapse({ title, children }) {
+function Collapse({ title, children, variant = "default" }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="collapse-container">
+    <div className={`collapse-container ${variant}`}>
       <button onClick={() => setIsOpen(!isOpen)} className="collapse-header">
         <span>{title}</span>
         {isOpen ? <FaChevronDown /> : <FaChevronUp />}
@@ -21,4 +22,3 @@ function Collapse({ title, children }) {
 }
 
 export default Collapse;
-
