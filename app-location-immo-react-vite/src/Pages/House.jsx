@@ -1,6 +1,8 @@
 import { useParams, Navigate } from "react-router-dom";
 import appartments from "../data";
 import Carousel from "../Components/Carousel";
+import Collapse from "../Components/CollapseAbout";
+import Stars from "../Components/Stars";
 
 function House() {
     const { id } = useParams();
@@ -12,40 +14,54 @@ function House() {
 
     return (
         <div className="house-container">
-            {apartment.pictures.length > 1 ? (
-                <Carousel pictures={apartment.pictures} />
-            ) : (
-                <img
-                    src={apartment.pictures[0]}
-                    alt={apartment.title}
-                    style={{ width: "100%", borderRadius: "10px" }}
-                />
-            )}
+            <Carousel pictures={apartment.pictures} />
 
-            <h1>{apartment.title}</h1>
-            <p>{apartment.location}</p>
 
-            <div className="host-info">
-                <h3>Hôte : {apartment.host?.name}</h3>
-                <img
-                    src={apartment.host?.picture}
-                    alt={apartment.host?.name}
-                    style={{ width: "50px", borderRadius: "50%" }}
-                />
+            <div className="house-info">
+                <div className="house-details">
+                    <div className="title-location">
+                        <div className="house-title">{apartment.title}</div>
+                        <div className="location">{apartment.location}</div>
+                    </div>
+                    <div className="house-host">
+                        <div className="host-info">
+                            <div className="host-name">{apartment.host.name}</div>
+                            <img
+                                src={apartment.host.picture}
+                                alt={apartment.host.name}
+                                className="host-picture"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="tags-rating">
+                    <div className="tags">
+                        {apartment.tags.map((tag, index) => (
+                            <span key={index} className="tag">
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                    <Stars rating={parseInt(apartment.rating)} />
+                </div>
             </div>
 
-            <p>Note : {apartment.rating} / 5</p>
+            <div className="collapses">
+                <Collapse title="Description">
+                    <p>{apartment.description}</p>
+                </Collapse>
 
-            <p>{apartment.description}</p>
-
-            <h4>Équipements :</h4>
-            <ul>
-                {apartment.equipments.map((item, index) => (
-                    <li key={index}>{item}</li>
-                ))}
-            </ul>
+                <Collapse title="Équipements">
+                    <ul>
+                        {apartment.equipments.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                </Collapse>
+            </div>
         </div>
     );
 }
 
 export default House;
+

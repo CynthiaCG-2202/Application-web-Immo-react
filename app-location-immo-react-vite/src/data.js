@@ -615,11 +615,6 @@ const appartments = [
 			"Marais",
 			"Rivoli"
 		]
-	},
-	{
-		"id": "fake-id",
-		"title": "Titre logement",
-		"cover": "https://zupimages.net/up/25/27/seov.png",
 	}
 ];
 

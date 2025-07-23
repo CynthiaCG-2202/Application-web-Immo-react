@@ -1,0 +1,75 @@
+.house-info {
+    margin-top: 35px;
+
+    .house-details {
+        display: flex;
+        justify-content: space-between;
+
+        .title-location {
+            .house-title {
+                font-size: 36px;
+                font-weight: 500;
+                color: #FF6060;
+            }
+
+            .location {
+                font-size: 18px;
+                font-weight: 500;
+
+            }
+
+        }
+
+        .house-host {
+            .host-info {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .host-name {
+                    font-size: 18px;
+                    color: #FF6060;
+                    width: 93px;
+                    height: 52px;
+                    text-align: right;
+                    font-weight: 500;
+                }
+
+                img.host-picture {
+                    object-fit: cover;
+                    height: 64px;
+                    width: 64px;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+
+    .tags-rating {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+
+        .tags {
+            display: flex;
+            gap: 10px;
+
+            & span {
+                background-color: #FF6060;
+                color: white;
+                font-size: 14px;
+                font-weight: 700;
+                padding: 5px;
+                border-radius: 20px;
+                width: 115px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

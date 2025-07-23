@@ -2,10 +2,9 @@
   background-color: #F6F6F6;
   padding: 60px;
   border-radius: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 70px 89.5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+  justify-items: center;
   margin-bottom: 20px;
 }

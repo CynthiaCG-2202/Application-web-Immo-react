@@ -23,6 +23,7 @@ function Carousel({ pictures }) {
         className="carousel-img"
       />
 
+      {/* Afficher les flèches et le compteur uniquement s’il y a plusieurs images */}
       {total > 1 && (
         <>
           <button className="carousel-arrow left" onClick={prevSlide}>
