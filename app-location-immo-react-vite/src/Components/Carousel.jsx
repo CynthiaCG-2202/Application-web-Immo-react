@@ -31,6 +31,9 @@ function Carousel({ pictures }) {
           <button className="carousel-arrow right" onClick={nextSlide}>
             <img src={arrowRight} alt="Suivant" />
           </button>
+          <div className="carousel-counter">
+            {current + 1} / {total}
+          </div>
         </>
       )}
     </div>
