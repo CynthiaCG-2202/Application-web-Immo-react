@@ -1,12 +1,6 @@
 // Déclaration des mixins
 @mixin responsive($breakpoint) {
-    @if $breakpoint ==tablet {
-        @media (max-width: 768px) {
-            @content;
-        }
-    }
-
-    @else if $breakpoint ==mobile {
+    @if $breakpoint ==mobile {
         @media (max-width: 480px) {
             @content;
         }
@@ -49,23 +43,38 @@
     }
 }
 
-// About-page 
+// Collapses
 @include responsive (mobile) {
-    .about-collapse {
 
-        gap: 25px;
+    .about-collapse {
         margin-bottom: 40px;
         margin-top: 50px;
 
         .collapse-container {
-            width: 300px;
+            width: 100%;
 
             .collapse-header {
-                width: 300px;
+                width: 100%;
                 font-size: 17px;
             }
+
         }
 
+    }
+
+    .collapse-container.house .collapse-header {
+        background-color: #ff6060;
+        color: white;
+        font-weight: 700;
+        height: 40px;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
     }
 }
 
