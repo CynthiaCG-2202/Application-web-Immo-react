@@ -8,7 +8,7 @@ function About() {
       <Banner />
       <div className='about-collapse'>
         {aboutCollapses.map((item) => (
-          <Collapse key={item.id} title={item.title} variant="about">
+          <Collapse key={item.id} title={item.title} className="about">
             {item.content}
           </Collapse>
         ))}

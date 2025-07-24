@@ -2,11 +2,11 @@ import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import "../styles/component-style/_collapses.scss";
 
-function Collapse({ title, children, variant = "default" }) {
+function Collapse({ title, children, className = "default" }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`collapse-container ${variant}`}>
+    <div className={`collapse-container ${className}`}>
       <button onClick={() => setIsOpen(!isOpen)} className="collapse-header">
         <span>{title}</span>
         {isOpen ? <FaChevronDown /> : <FaChevronUp />}

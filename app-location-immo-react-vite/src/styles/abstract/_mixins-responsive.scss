@@ -1,7 +1,6 @@
-// Déclaration des mixins
 @mixin responsive($breakpoint) {
     @if $breakpoint ==mobile {
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
             @content;
         }
     }

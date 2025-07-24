@@ -20,7 +20,7 @@ function House() {
             <div className="house-info">
                 <div className="house-details">
                     <div className="title-location">
-                        <div className="house-title">{apartment.title}</div>
+                        <div className="house-title">{apartment.title}</div> 
                         <div className="location">{apartment.location}</div>
                     </div>
                     <div className="tags">
@@ -47,11 +47,11 @@ function House() {
             </div>
 
             <div className="collapses">
-                <Collapse title="Description" variant="house">
+                <Collapse title="Description" className="house">
                     <p>{apartment.description}</p>
                 </Collapse>
 
-                <Collapse title="Équipements" variant="house">
+                <Collapse title="Équipements" className="house">
                     <ul>
                         {apartment.equipments.map((item, index) => (
                             <li key={index}>{item}</li>
