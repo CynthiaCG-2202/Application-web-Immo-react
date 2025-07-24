@@ -23,7 +23,16 @@ function House() {
                         <div className="house-title">{apartment.title}</div>
                         <div className="location">{apartment.location}</div>
                     </div>
-                    <div className="house-host">
+                    <div className="tags">
+                        {apartment.tags.map((tag, index) => (
+                            <span key={index} className="tag">
+                                <span className="tag-text">{tag}</span>
+                            </span>
+                        ))}
+                    </div>
+                </div>
+                <div className="host-rating">
+                        <div className="house-host">
                         <div className="host-info">
                             <div className="host-name">{apartment.host.name}</div>
                             <img
@@ -33,16 +42,6 @@ function House() {
                             />
                         </div>
                     </div>
-                </div>
-                <div className="tags-rating">
-                    <div className="tags">
-                        {apartment.tags.map((tag, index) => (
-                            <span key={index} className="tag">
-                                <span className="tag-text">{tag}</span>
-                            </span>
-                        ))}
-                    </div>
-
                     <Stars rating={parseInt(apartment.rating)} />
                 </div>
             </div>
